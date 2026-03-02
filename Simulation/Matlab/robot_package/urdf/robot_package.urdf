@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_package">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00176415624798898 -1.26747168353941E-05 0.00107222796480731"
+        rpy="0 0 0" />
+      <mass
+        value="1.37883847656827" />
+      <inertia
+        ixx="0.00328532735269924"
+        ixy="-6.49090742076173E-20"
+        ixz="7.56046311875566E-05"
+        iyy="0.0022542100299895"
+        iyz="1.15566893231935E-19"
+        izz="0.00413952696442128" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_bigcu_leg">
+    <inertial>
+      <origin
+        xyz="0.00749999999999997 -0.0149670430135267 0.0262878322314953"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228623889803847" />
+      <inertia
+        ixx="1.18988780153825E-05"
+        ixy="-3.76595465884763E-22"
+        ixz="5.4221581834269E-22"
+        iyy="9.04572239479261E-06"
+        iyz="4.49460692145783E-06"
+        izz="3.71049520735432E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_bigcu_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_bigcu_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bigcu_joint"
+    type="revolute">
+    <origin
+      xyz="-0.010008 -0.075013 -0.015"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_bigcu_leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="right_small_leg">
+    <inertial>
+      <origin
+        xyz="0.00750000000000005 -0.0126038283297361 -0.0248717751766651"
+        rpy="0 0 0" />
+      <mass
+        value="0.0347381889803847" />
+      <inertia
+        ixx="4.01039993717052E-05"
+        ixy="-5.54195475764729E-21"
+        ixz="-1.09959336955503E-20"
+        iyy="3.1899486062631E-05"
+        iyz="-1.52681797572127E-05"
+        izz="9.50719539583864E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_small_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_small_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_small_joint"
+    type="revolute">
+    <origin
+      xyz="0.015 -0.029934 0.052576"
+      rpy="0 0 0" />
+    <parent
+      link="right_bigcu_leg" />
+    <child
+      link="right_small_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0.0193204607357672 8.73369237444632E-06 2.26059734588675E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0552945430162286" />
+      <inertia
+        ixx="6.1811204803467E-05"
+        ixy="-7.13777804548091E-09"
+        ixz="-1.65648094774103E-10"
+        iyy="3.71518408048408E-05"
+        iyz="4.93824557180512E-10"
+        izz="3.71666117121649E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.368627450980392 0.368627450980392 0.368627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.015 -0.035225 -0.06951"
+      rpy="0 0 0" />
+    <parent
+      link="right_small_leg" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="left_bigcu_leg">
+    <inertial>
+      <origin
+        xyz="0.00750000000000002 -0.0165848469876302 -0.0252983270276296"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228623889803847" />
+      <inertia
+        ixx="1.18988780153825E-05"
+        ixy="4.1661618907952E-21"
+        ixz="6.36572098446656E-21"
+        iyy="8.46261008171085E-06"
+        iyz="-4.79296443496432E-06"
+        izz="4.29360752043607E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_bigcu_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_bigcu_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bigcu_joint"
+    type="revolute">
+    <origin
+      xyz="-0.010008 0.074987 -0.015"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_bigcu_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="left_small_leg">
+    <inertial>
+      <origin
+        xyz="0.00749999999999988 -0.0139096591145459 0.0241657417084904"
+        rpy="0 0 0" />
+      <mass
+        value="0.0347381889803847" />
+      <inertia
+        ixx="4.01039993717052E-05"
+        ixy="7.59363985836795E-22"
+        ixz="-1.39193827331608E-21"
+        iyy="3.0213198018132E-05"
+        iyz="1.6371731666806E-05"
+        izz="1.11934834403377E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_small_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_small_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_small_joint"
+    type="revolute">
+    <origin
+      xyz="0.015 -0.03317 -0.050597"
+      rpy="0 0 0" />
+    <parent
+      link="left_bigcu_leg" />
+    <child
+      link="left_small_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="0.0193204607364665 8.58322072139206E-06 -1.62987178685403E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.055294543579253" />
+      <inertia
+        ixx="6.18112049274775E-05"
+        ixy="-7.01064500980445E-09"
+        ixz="1.35072358926914E-09"
+        iyy="3.71527088187312E-05"
+        iyz="3.50868638050075E-09"
+        izz="3.71657438121288E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.368627450980392 0.368627450980392 0.368627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.015 -0.038874 0.067537"
+      rpy="0 0 0" />
+    <parent
+      link="left_small_leg" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_bigxi_leg">
+    <inertial>
+      <origin
+        xyz="0.00749999999999997 -0.023263207044797 0.0212384838910622"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106280972450962" />
+      <inertia
+        ixx="4.54553070701038E-06"
+        ixy="-3.05445182551049E-22"
+        ixz="1.16352907022757E-22"
+        iyy="2.27347805684658E-06"
+        iyz="2.17761804134102E-06"
+        izz="2.67060629685491E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_bigxi_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/right_bigxi_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bigxi_joint"
+    type="revolute">
+    <origin
+      xyz="-0.039874 -0.075013 0.011609"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_bigxi_leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="left_bigxi_leg">
+    <inertial>
+      <origin
+        xyz="0.00750000000000003 -0.0243621068444674 -0.0199684188181927"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106280972450962" />
+      <inertia
+        ixx="4.54553070701039E-06"
+        ixy="1.62336392240699E-21"
+        ixz="1.14358864602654E-21"
+        iyy="2.04281154202811E-06"
+        iyz="-2.14411032968378E-06"
+        izz="2.90127281167338E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_bigxi_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_package/meshes/left_bigxi_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bigxi_joint"
+    type="revolute">
+    <origin
+      xyz="-0.039874 0.074987 0.011609"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_bigxi_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="1"
+      velocity="0.1" />
+  </joint>
+</robot>

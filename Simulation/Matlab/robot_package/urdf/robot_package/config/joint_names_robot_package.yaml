@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'right_bigcu_joint', 'right_small_joint', 'right_wheel_joint', 'left_bigcu_joint', 'left_small_joint', 'left_wheel_joint', 'right_bigxi_joint', 'left_bigxi_joint', ]
